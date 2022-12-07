@@ -17,7 +17,7 @@ function onFormSubmit(e) {
 
   const formDataToSend = new FormData(e.currentTarget);
   formDataToSend.forEach((value, name) => {
-    formData[name].value = value;
+    formData[name] = value;
   });
   e.currentTarget.reset();
   localStorage.removeItem(KEY_LOCALSTORAGE);
